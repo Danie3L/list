@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="scripts/index.js" defer type="module"></script>
+  </head>
+  <body>
+    <header class="header">
+      <span class="header__caption"><strong>*</strong> - required field </span>
+      <!-- <h1 class="header__heading">Users List</h1> -->
+    </header>
+    <section class="section">
+      <form class="form" id="form">
+        <label class="form__label" for="name"
+          >Name: <input class="form__input" type="text" id="name"
+        /></label>
+        <label class="form__label" for="city"
+          >City: <input class="form__input" type="text" id="city"
+        /></label>
+        <label class="form__label" for="mail"
+          ><small class="form__input-status">*</small> Mail:
+          <input class="form__input" type="text" id="mail"
+        /></label>
+
+        <button class="form__btn" id="form-btn">Save data</button>
+      </form>
+    </section>
+    <div class="buttons-container">
+      <button class="get-btn" id="get-btn">Get Data</button>
+      <button class="clear-btn" id="clear-btn">Clear Data</button>
+    </div>
+    <table id="table">
+      <tbody id="title">
+        <tr>
+          <th>Name</th>
+          <th>City</th>
+          <th>Mail</th>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+  </body>
+</html>
